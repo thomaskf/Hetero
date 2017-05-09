@@ -62,7 +62,8 @@
 // The contact person of the program
 // ==================================================================================================
 
-#define CONTACTPERSON "Lars Jermiin <Lars.Jermiin@csiro.au>"
+#define CONTACTPERSON "Lars Jermiin <Lars.Jermiin@anu.edu.au>"
+#define CONTACTPERSON2 "Thomas Wong <Thomas.Wong@anu.edu.au>"
 
 // ==================================================================================================
 // Number of decimal places

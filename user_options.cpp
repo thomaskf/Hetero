@@ -168,6 +168,7 @@ void UserOptions::outputUsage(char* progName) {
     cout << "      $ " << progName << " trees.txt site_info_file.txt param_file_list.txt" << endl << endl;
 
     cout << "Contact: " << CONTACTPERSON << endl;
+    cout << "         " << CONTACTPERSON2 << endl;
     cout << "================================================================================" << endl;
 }
 
