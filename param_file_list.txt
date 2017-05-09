@@ -1,0 +1,7 @@
+# "Parameter list file" shows the name of the corresponding parameter file of each variant site category
+
+# Format: [name of variant site category]	[parameter file name]
+Category_1	parameter_1.txt
+Category_2	parameter_2.txt
+
+# Note: the names of the variant categories are same as the names of variant site categories in the tree file.

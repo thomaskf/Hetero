@@ -1,0 +1,8 @@
+# Tree file lists the tree of each site category, the edge lengths and the labels of terminal/internal nodes.
+# The edge lengths represent the average number of substitutions per site.
+# Format: [name of variant site category]	[newick tree format]
+Category_1	(A:0.30941,(B:0.33809,(C:0.29115,(D:0.04607,(E:0.11096,(F:0.06955,(G:0.03861,H:0.04429)1:0.01701)2:0.02719)3:0.04063)4:0.27458)5:0.02226)6:0.20349);
+
+Category_2	(A:0.47928,(B:0.06142,(C:0.06739,(D:0.00915,(E:0.00227,(F:0.00033,(G:0.00114,H:0.00059)1:0.00076)2:0.00018)3:0.00069)4:0.05522)5:0.06595)6:0.09457);
+
+# Note: all the trees are in the same topology, and with the same set of terminal/internal nodes.

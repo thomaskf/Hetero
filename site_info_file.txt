@@ -1,0 +1,12 @@
+# Site info file lists the detailed information of each site category,
+# including the site proportion and the nucleotide distribution at the root.
+
+# Format: [name of site category]	[variant/invariant]	[proportion]	[freq(A)]	[freq(C)]	[freq(G)]	[freq(T)]
+
+Constant_site	invariant	0.48100 0.30606	0.16447	0.14259	0.38688
+Category_1	variant	0.13214 0.51059	0.18069	0.12901	0.17971
+Category_2	variant	0.38686 0.32819	0.26728	0.10713	0.29740
+
+# Note:
+# 1. The names of the variant categories are same as the names of variant site categories in the tree file.
+# 2. There is at most one invariant category.
