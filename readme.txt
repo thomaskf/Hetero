@@ -4,8 +4,8 @@ Hetero2 : A program to simulate heterogeneous multiple alignment sequences
 To compile the programs
 ==========================
 
-$ tar -zxvf Hetero_2.0.tar.gz
-$ cd Hetero_2.0
+$ tar -zxvf Hetero-2.2.tar.gz
+$ cd Hetero-2.2
 $ make
 
 An executable files called "Hetero2" will appear
