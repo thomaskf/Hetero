@@ -146,7 +146,8 @@ int* genTopMatrixFrStr(string newickStr, int& rowNum, vector<string>& leafList,
     string currDist = "";
     int distMode = 0;
     int isLeaf = 1;
-    for (int i=0; i<(int)newickStr.length(); i++) {
+    int i;
+    for (i=0; i<(int)newickStr.length(); i++) {
         char c = newickStr.at(i);
         if (c == ';')
             break;
@@ -212,6 +213,11 @@ int* genTopMatrixFrStr(string newickStr, int& rowNum, vector<string>& leafList,
         } else {
             currNodeName.append(1,c);
         }
+    }
+    if (waitNodeNameList.size() != 0) {
+    	cerr << "Error! The input tree is unrooted." << endl;
+    	cerr << "This program only supports a rooted tree" << endl;
+    	exit(1);
     }
     return topMatrix;
 }
