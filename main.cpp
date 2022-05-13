@@ -80,6 +80,9 @@ int main(int argc, char** argv) {
         exit(1);
     }
     
+    // Initialise random number generator
+    srand(options.seed_number);
+    
     // show the summary of the arguments
     options.showSummary();
 

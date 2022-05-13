@@ -60,7 +60,7 @@
 #include <math.h>
 #include <time.h>
 
-#define DEBUG_MODE
+// #define DEBUG_MODE
 
 using namespace std;
 

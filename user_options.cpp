@@ -111,6 +111,8 @@ UserOptions::UserOptions() {
     edgeRepresent = 1;
     
     perfectSeq = 0;
+    
+    seed_number = 0;
 
 }
 
@@ -154,6 +156,8 @@ void UserOptions::outputUsage(char* progName) {
 
     cout << "  -p                    : Perfect sequence simulation" << endl << endl;
 
+    cout << "  -s                    : Seed number" << endl << endl;
+
     cout << "  -h                    : This help page" << endl << endl;
     
     cout << "Output files:" << endl;
@@ -191,6 +195,7 @@ int UserOptions::readArguments(int argc, char** argv, string* errMsg) {
     bool f_option_assigned = false;
     bool o_option_assigned = false;
     bool e_option_assigned = false;
+    bool s_option_assigned = false;
     
     *errMsg = "";
     
@@ -280,6 +285,21 @@ int UserOptions::readArguments(int argc, char** argv, string* errMsg) {
                     return 2;
                     break;
                     
+                case 's':
+                    if (s_option_assigned)
+                        duplicateOption = true;
+                    else if (value.length() == 0)
+                        emptyOption = true;
+                    else {
+                        s_option_assigned = true;
+                        unsigned long valueLong = strtoul(value.c_str(), NULL, 10);
+                        if (valueLong <= 0)
+                            *errMsg = "Error! The value for '-s' has to be greater than 0";
+                        else
+                            seed_number = valueLong;
+                    }
+                    break;
+
                 default:
                     *errMsg = "Unknown option '-" + string(1,flag);
                     break;
@@ -299,6 +319,11 @@ int UserOptions::readArguments(int argc, char** argv, string* errMsg) {
     }
     if (outputPrefix == "") {
         setDefaultOutputPrefix();
+    }
+
+    // initialize the random seed
+	if (seed_number == 0) {
+    	seed_number = mix(clock(), time(NULL), getpid());
     }
     
     return 0;
@@ -339,6 +364,8 @@ void UserOptions::showSummary() {
 
     cout << "Output file ........................................... " << outputPrefix << ".out" << endl;
     
+    cout << "Seed number ........................................... " << seed_number << endl;
+
     cout << "================================================================================" << endl;
 }
 

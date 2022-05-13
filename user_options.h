@@ -60,6 +60,7 @@
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include <unistd.h>
 #include "tool_box.h"
 #include "definitions.h"
 
@@ -116,6 +117,9 @@ public:
     
     // to simulate a perfect sequence
     int perfectSeq;
+    
+    // input seed number
+    unsigned long seed_number;
 
     // =================================
     // Functions

@@ -574,9 +574,6 @@ void simSeqFrRASParam(char* treeFile, char* siteInfoFile, char* paramFilelist, i
     char* parentSeq;
     int i,j,k;
     
-    // initialize the random seed
-    srand(time(NULL));
-    
     // initialize the randome nucleotide generators
     RandNuclGenerator* randNuclGen = new RandNuclGenerator[vs.num_alpha * numEdges];
     for (i=0; i<vs.num_alpha; i++) {
@@ -1020,9 +1017,6 @@ void simPerfectSeqFrRASParam(char* treeFile, char* siteInfoFile, char* paramFile
     char* currSeq;
     char* parentSeq;
     int i,j,k,l;
-    
-    // initialize the random seed
-    srand(time(NULL));
     
     // site categories
     //  0 : constant site
